@@ -12,6 +12,7 @@ import {
 import { ModeToggle } from "./mode-toggle";
 import { ShoppingCart, UserIcon, MenuIcon } from "lucide-react";
 import Link from "next/link";
+import UserButton from "./user-button";
 
 export default function Menu() {
   return (
@@ -25,11 +26,7 @@ export default function Menu() {
           </Link>
         </Button>
 
-        <Button asChild>
-          <Link href="/sign-in">
-            <UserIcon /> Sign In
-          </Link>
-        </Button>
+        <UserButton />
       </nav>
 
       <nav className="md:hidden">
@@ -48,11 +45,7 @@ export default function Menu() {
                 </Link>
               </Button>
 
-              <Button asChild>
-                <Link href="/sign-in">
-                  <UserIcon /> Sign In
-                </Link>
-              </Button>
+              <UserButton />
 
               <SheetDescription></SheetDescription>
             </SheetHeader>

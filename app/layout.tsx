@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter as GoogleInter } from "next/font/google";
 import "../assets/styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/toaster";
 
 const interFont = GoogleInter({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
